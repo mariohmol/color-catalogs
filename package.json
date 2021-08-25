@@ -9,14 +9,14 @@
     "watch:test": "onchange 'src/**/*.ts' '*.ts' -- npm run test",
     "clean": "find ./src -name \"*.js\" -type f -delete & rm *.js & rm -rf dist/ && mkdir dist ",
     "test": "mocha -r ts-node/register test/**.ts",
-    "browserify": "browserify dist/index.js --standalone colors-catalog -o colors-catalog.js",
-    "manual:compile": "tsc && tsc addons.ts && rm src/*.js && rm src/addons/*.js",
+    "browserify": "browserify dist/index.js --standalone colorsCatalog -o colors-catalog.js",
     "dist": "npm run build && npm run browserify && cp colors-catalog.js dist/",
     "publishnpm": "npm run dist && npm publish",
     "start": "cd docs && http-server",
     "demo": "cp colors-catalog.js docs/ && npm run start",
     "demo-build": "npm run dist && cp colors-catalog.js docs/",
-    "demo-full": "npm run dist && npm run demo"
+    "demo-full": "npm run dist && npm run demo",
+    "lang:build": "npx ts-node scripts/build_lang.ts"
   },
   "repository": {
     "type": "git",
@@ -29,11 +29,13 @@
   },
   "homepage": "https://github.com/mariohmol/colors-catalog#readme",
   "dependencies": {
+    "fs": "0.0.1-security",
     "randexp": "^0.5.3"
   },
   "devDependencies": {
     "@types/chai": "^4.1.5",
     "@types/mocha": "^5.2.5",
+    "@types/node": "^16.7.1",
     "chai": "^4.1.2",
     "codelyzer": "^5.2.0",
     "mocha": "^8.3.2",

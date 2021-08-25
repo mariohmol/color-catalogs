@@ -3,7 +3,7 @@ import Flexa from './catalogs/flexa.json'
 import RAL from './catalogs/ral.json'
 import Wikipedia from './catalogs/wikipedia.json'
 
-const COLORS = {
+const COLORS: any = {
     X11,
     Flexa,
     RAL,
