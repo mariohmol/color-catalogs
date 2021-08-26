@@ -4,6 +4,10 @@ Find good color catalog for your business, let the users pick up colors and find
 
 `npm i colors-catalog` 
 
+![Colors Catalog](/docs/print.png)
+
+## Navigate and find the colors [Live](https://mariohmol.github.io/colors-catalog/)
+
 Total Colors so far: 8191
 ## Catalogs
 
@@ -63,7 +67,7 @@ Browser:
 ```html
 <script src="colors-catalog.js"></script>
 <script>
-var cpf = colorsCatalog.findByColor('X11', '#cc00cc') ; 
+var color = colorsCatalog.findByColor('X11', '#cc00cc') ; 
 </script>  
 ```
 
