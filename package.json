@@ -28,19 +28,21 @@
     "url": "https://github.com/mariohmol/colors-catalog/issues"
   },
   "homepage": "https://github.com/mariohmol/colors-catalog#readme",
-  "dependencies": {
-    "fs": "0.0.1-security",
-    "randexp": "^0.5.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/chai": "^4.1.5",
     "@types/mocha": "^5.2.5",
     "@types/node": "^16.7.1",
+    "@types/uuid": "^8.3.1",
+    "axios": "^0.21.1",
+    "browserify": "^17.0.0",
     "chai": "^4.1.2",
     "codelyzer": "^5.2.0",
+    "dotenv": "^10.0.0",
     "mocha": "^8.3.2",
     "onchange": "^7.1.0",
     "ts-node": "^7.0.1",
-    "typescript": "~4.0.2"
+    "typescript": "~4.0.2",
+    "uuid": "^8.3.2"
   }
 }

@@ -4,6 +4,7 @@ Find good color catalog for your business, let the users pick up colors and find
 
 `npm i colors-catalog` 
 
+Total Colors so far: 8191
 ## Catalogs
 
 * X11
@@ -40,11 +41,6 @@ Find good color catalog for your business, let the users pick up colors and find
 [6](https://simplicable.com/new/japanese-colors)
 
 
-
-
-
-
-
 # Catalog
 
 Formate seus dados com mascaras de tipos de dados brasileiros
@@ -71,8 +67,18 @@ var cpf = colorsCatalog.findByColor('X11', '#cc00cc') ;
 </script>  
 ```
 
+## Internationalization (i18n)
 
-# Utils
+We have all the possible colors names unified in a json file and we translated the colors names for the main languages.
+
+Here you can find color names in:
+* English
+* Italian
+* Portuguese
+* Spanish
+* Detch
+
+## Utils
 
 Methods utils to work with colors:
 
