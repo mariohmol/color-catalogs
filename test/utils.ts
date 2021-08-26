@@ -1,41 +1,63 @@
-import { COLORS, colorDistance,
+import {
+  COLORS,
+  groupColors,
+  colorDistance,
   findByColor,
-  findColorByName, HEXtoRGB } from '../index';
+  findByName, HEXtoRGB
+} from '../index';
 import { expect } from 'chai';
 
 describe('Color Utils Test', () => {
 
-  // it('findByColor', () => {
-  //   const keys = Object.keys(COLORS.Australia)
-  //   expect(keys.length).to.be.equal(206)
 
-  //   const color = findByColor('Australia', '#cc00cc')
-  //   expect(color).to.eql({ name: 'P41 -  Erica Pink', value: '#c55a83' });
-  // });
+  it('groupColors with size', () => {
+    const size = 5
+    const colors: any = Object.values(COLORS.Australia)
+    const grouped: any = groupColors(colors, size)
+    expect(grouped.length).to.eql(size);
+    expect(grouped[0].length).to.eql(Math.floor(colors.length / size));
+  });
 
-  // it('findColorByName', () => {
-  //   const keys = Object.keys(COLORS.British4800)
-  //   expect(keys.length).to.be.equal(122)
+  it('groupColors without size', () => {
+    const colors: any = Object.values(COLORS.Australia)
+    const grouped: any = groupColors(colors)
+    const size = 10
+    expect(grouped.length).to.eql(size);
+    expect(grouped[0].length).to.eql(Math.floor(colors.length / size));
+  });
 
-  //   const color = findColorByName('British4800', '#cc00cc')
-  //   expect(color).to.eql({ name: '24 E 53 - Purple', value: '#90538f' });
-  // });
+  it('findByColor', () => {
+    const catalog = COLORS.Australia
+    const keys = Object.keys(catalog)
 
-  // it('colorDistance', () => {
-  //   const keys = Object.keys(COLORS.BritishStandard)
-  //   expect(keys.length).to.be.equal(119)
+    const color = findByColor('Australia', catalog[keys[0]])
+    expect(color).to.eql({ name: 'B61 -  Coral Sea', value: '#2b3873' });
+  });
 
-  //   const color = colorDistance('BritishStandard', '#cc00cc')
-  //   expect(color).to.eql({ name: '381 542 - Ruby', value: '#982d57' });
-  // });
+  it('findByName', () => {
+    const catalog = COLORS.British4800
+    const keys = Object.keys(catalog)
+
+    const color = findByName('British4800', keys[0])
+    expect(color).to.eql('#deded2');
+  });
+
+  it('colorDistance', () => {
+    const catalog = COLORS.BritishStandard
+    const keys = Object.keys(catalog)
+    expect(keys.length).to.be.equal(119)
+
+    const color = colorDistance(catalog[keys[0]], catalog[keys[1]])
+    expect(color).to.eql(77.47902942086975);
+  });
 
 
-  // it('HEXtoRGB', () => {
-  //   const keys = Object.keys(COLORS.Crayola72)
-  //   expect(keys.length).to.be.equal(72)
+  it('HEXtoRGB', () => {
+    const catalog = COLORS.Crayola72
+    const keys = Object.keys(catalog)
 
-  //   const color = HEXtoRGB('#cc00cc')
-  //   expect(color).to.eql({ name: 'Hot Pink', value: '#C22AA3' });
-  // });
+    const color = HEXtoRGB(catalog[keys[0]])
+    expect(color).to.eql([115, 97, 71]);
+  });
 
 });

@@ -8,7 +8,6 @@ function renderItems() {
 function makeCatalogItem(color) {
     const item = colorsCatalog.COLORS[color]
     // var color = colorsCatalog.findByColor('X11', '#cc00cc') 
-    console.log(item)
 
     const html = `  
     <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
@@ -42,7 +41,6 @@ function topColors(limit = 30) {
     const total = []
     for (const key in colorsCatalog.COLORS) {
         for (const item in colorsCatalog.COLORS[key]) {
-            console.log(item, item.toLowerCase().indexOf(colorname) >= 0)
             if (item.toLowerCase().indexOf(colorname) >= 0) {
                 total.push({
                     name: item,
@@ -57,8 +55,6 @@ function topColors(limit = 30) {
 }
 function makeSearch(e) {
     e.preventDefault()
-    
-    console.log(colorname)
 
     const total = topColors()
     const html = total.map(({name, value, catalog}) => `  
@@ -83,7 +79,6 @@ function makeSearch(e) {
             
         </div>
     </div>`)
-    console.log(total)
     document.querySelector('#search-items').innerHTML = html.join('')
 }
 

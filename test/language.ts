@@ -1,4 +1,8 @@
-import { LANGUAGES, COLORS, findByColor, translateByColor, translateByName } from '../index';
+import {
+  LANGUAGES, COLORS,
+  // translateByColor, 
+  translateByName
+} from '../index';
 import { expect } from 'chai';
 
 describe('Color Catalogs Test', () => {
@@ -30,8 +34,6 @@ describe('Color Catalogs Test', () => {
 });
 
 function testLang(type: any, vals: any) {
-
-
   const keys = Object.keys(COLORS.Australia)
   const name = keys[0]
   let nameTranslated = translateByName(name, type)
@@ -40,9 +42,7 @@ function testLang(type: any, vals: any) {
   const length = Object.keys(LANGUAGES[type]).length
   expect(length).to.be.greaterThan(100)
 
-
   // const color = COLORS.Australia[name]
-
   // nameTranslated = translateByColor(color, type)
   // console.log(color, nameTranslated)
   // expect(nameTranslated).to.eql('Sattes Blau');

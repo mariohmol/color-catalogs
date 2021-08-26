@@ -1,7 +1,7 @@
 {
   "name": "color-catalogs",
-  "version": "0.0.2",
-  "description": "Javascript Utils para Brasil (cpf, cnpj...)",
+  "version": "0.0.4",
+  "description": "A lot of Color Catalogs with translations, color-pickers integration and utils functions",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",

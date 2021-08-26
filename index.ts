@@ -1,7 +1,7 @@
 import COLORS from './src/colors'
 import {
-  findByColor, findColorByName,
-  colorDistance, HEXtoRGB
+  findByColor, findByName,
+  colorDistance, HEXtoRGB, groupColors
 } from './src/utils'
 import LANGUAGES, { translateByColor, translateByName } from './src/languages'
 
@@ -10,8 +10,9 @@ export {
   // Colors
   COLORS,
   findByColor,
-  findColorByName,
+  findByName,
   colorDistance,
+  groupColors,
 
   // i18n
   LANGUAGES,
