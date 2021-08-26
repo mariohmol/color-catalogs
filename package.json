@@ -1,5 +1,5 @@
 {
-  "name": "colors-catalog",
+  "name": "color-catalogs",
   "version": "0.0.1",
   "description": "Javascript Utils para Brasil (cpf, cnpj...)",
   "main": "dist/index.js",
@@ -9,25 +9,25 @@
     "watch:test": "onchange 'src/**/*.ts' '*.ts' -- npm run test",
     "clean": "find ./src -name \"*.js\" -type f -delete & rm *.js & rm -rf dist/ && mkdir dist ",
     "test": "mocha -r ts-node/register test/**.ts",
-    "browserify": "browserify dist/index.js --standalone colorsCatalog -o colors-catalog.js",
-    "dist": "npm run build && npm run browserify && cp colors-catalog.js dist/",
+    "browserify": "browserify dist/index.js --standalone colorsCatalog -o color-catalogs.js",
+    "dist": "npm run build && npm run browserify && cp color-catalogs.js dist/",
     "publishnpm": "npm run dist && npm publish",
     "start": "cd docs && http-server",
-    "demo": "cp colors-catalog.js docs/ && npm run start",
-    "demo-build": "npm run dist && cp colors-catalog.js docs/",
+    "demo": "cp color-catalogs.js docs/ && npm run start",
+    "demo-build": "npm run dist && cp color-catalogs.js docs/",
     "demo-full": "npm run dist && npm run demo",
     "lang:build": "npx ts-node scripts/build_lang.ts"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mariohmol/colors-catalog.git"
+    "url": "git+https://github.com/mariohmol/color-catalogs.git"
   },
   "author": "Mario Mol <mariohmol@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mariohmol/colors-catalog/issues"
+    "url": "https://github.com/mariohmol/color-catalogs/issues"
   },
-  "homepage": "https://github.com/mariohmol/colors-catalog#readme",
+  "homepage": "https://github.com/mariohmol/color-catalogs#readme",
   "dependencies": {},
   "devDependencies": {
     "@types/chai": "^4.1.5",

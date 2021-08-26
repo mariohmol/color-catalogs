@@ -1,12 +1,12 @@
-# colors-catalog
+# color-catalogs
 
 Find good color catalog for your business, let the users pick up colors and find the color closer based on name or RGB/Hash
 
-`npm i colors-catalog` 
+`npm i color-catalogs` 
 
 ![Color Catalogs](/docs/print.png)
 
-## Navigate and find the colors [Live](https://mariohmol.github.io/colors-catalog/)
+## Navigate and find the colors [Live](https://mariohmol.github.io/color-catalogs/)
 
 Total Colors so far: 8191
 ## Catalogs
@@ -51,7 +51,7 @@ Formate seus dados com mascaras de tipos de dados brasileiros
 
 Node:
 ```js
-const { COLORS, findByColor } = require('colors-catalog');
+const { COLORS, findByColor } = require('color-catalogs');
 // List for X11 Color Catalogs
 console.log(COLORS.X11) 
 // That will find the color: { name: 'Dark Violet', value: '#9400D3' }
@@ -60,12 +60,12 @@ const color = findByColor('X11', '#cc00cc')
 
 Typescript:
 ```ts
-import { COLORS, findByColor } from 'colors-catalog';
+import { COLORS, findByColor } from 'color-catalogs';
 ```
 
 Browser:
 ```html
-<script src="colors-catalog.js"></script>
+<script src="color-catalogs.js"></script>
 <script>
 var color = colorsCatalog.findByColor('X11', '#cc00cc') ; 
 </script>  
