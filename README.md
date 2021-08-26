@@ -82,6 +82,52 @@ Here you can find color names in:
 * Spanish
 * Detch
 
+## React
+
+[Live Example](https://replit.com/@mariohmol/Color-Catalogs) using React , React-Color and Color-Catalogs
+
+```jsx
+import React, {useState} from 'react';
+import './App.css';
+import { CompactPicker } from 'react-color';
+import { COLORS } from 'color-catalogs'
+
+function App() {
+  const catalogs = Object.keys(COLORS)
+  const [color, setColor] = useState('#fff')
+  const [catalog, setCatalog] = useState(catalogs[0])
+  const handleChangeComplete = (color) => {
+    setColor(color.hex);
+  }
+  
+  const colors = Object.values(COLORS[catalog])
+  return (
+    <div className="App">
+      <h1>
+          Color Catalogs
+      </h1>
+      <label>Catalogs</label>
+      <select onChange={({target})=>setCatalog(target.value)}>
+      {catalogs.map(catalog=>(
+        <option key={catalog} value={catalog}>{catalog}</option>
+        )
+      )}
+      </select>
+
+      <CompactPicker
+        colors={colors}
+        color={color}
+        onChangeComplete={handleChangeComplete}
+      />
+    </div>
+  );
+}
+
+export default App;
+
+```
+
+
 ## Utils
 
 Methods utils to work with colors:

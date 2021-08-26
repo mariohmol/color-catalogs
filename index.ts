@@ -1,6 +1,23 @@
 import COLORS from './src/colors'
-import { findByColor, HEXtoRGB } from './src/utils'
+import {
+  findByColor, findColorByName,
+  colorDistance, HEXtoRGB
+} from './src/utils'
+import LANGUAGES, { translateByColor, translateByName } from './src/languages'
+
 export {
+
+  // Colors
   COLORS,
-  findByColor, HEXtoRGB
+  findByColor,
+  findColorByName,
+  colorDistance,
+
+  // i18n
+  LANGUAGES,
+  translateByColor,
+  translateByName,
+
+  // Conversions
+  HEXtoRGB
 }

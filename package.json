@@ -1,6 +1,6 @@
 {
   "name": "color-catalogs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Javascript Utils para Brasil (cpf, cnpj...)",
   "main": "dist/index.js",
   "scripts": {
