@@ -4,7 +4,7 @@ Find good color catalog for your business, let the users pick up colors and find
 
 `npm i colors-catalog` 
 
-![Colors Catalog](/docs/print.png)
+![Color Catalogs](/docs/print.png)
 
 ## Navigate and find the colors [Live](https://mariohmol.github.io/colors-catalog/)
 
@@ -52,7 +52,7 @@ Formate seus dados com mascaras de tipos de dados brasileiros
 Node:
 ```js
 const { COLORS, findByColor } = require('colors-catalog');
-// List for X11 Colors Catalog
+// List for X11 Color Catalogs
 console.log(COLORS.X11) 
 // That will find the color: { name: 'Dark Violet', value: '#9400D3' }
 const color = findByColor('X11', '#cc00cc') 

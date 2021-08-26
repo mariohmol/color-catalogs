@@ -1,7 +1,7 @@
 import { COLORS, findByColor } from '../index';
 import { expect } from 'chai';
 
-describe('Colors Catalog Test', () => {
+describe('Color Catalogs Test', () => {
 
   it('Australia', () => {
     const keys = Object.keys(COLORS.Australia)
