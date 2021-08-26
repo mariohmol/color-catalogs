@@ -28,6 +28,13 @@ describe('Color Catalogs Test', () => {
     expect(color).to.eql({ name: '381 542 - Ruby', value: '#982d57' });
   });
 
+  it('Cedro', () => {
+    const keys = Object.keys(COLORS.Cedro)
+    expect(keys.length).to.be.equal(72)
+
+    const color = findByColor('Cedro', '#cc00cc')
+    expect(color).to.eql({ name: 'Hot Pink', value: '#C22AA3' });
+  });
 
   it('Crayola72', () => {
     const keys = Object.keys(COLORS.Crayola72)

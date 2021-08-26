@@ -1,6 +1,7 @@
 import Australia from './catalogs/australia.json'
 import British4800 from './catalogs/british-4800.json'
 import BritishStandard from './catalogs/british-standard.json'
+import Cedro from './catalogs/cedro.json'
 import Crayola72 from './catalogs/crayola72.json'
 import Crayola100 from './catalogs/crayola100.json'
 import Flexa from './catalogs/flexa.json'
@@ -20,6 +21,7 @@ const COLORS: any = {
     Australia,
     British4800,
     BritishStandard,
+    Cedro,
     Crayola72,
     Crayola100,
     Flexa,
